@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <!-- maintainer-needed -->
+   <maintainer>
+      <email>sunova@tutanota.com</email>
+   </maintainers>
   <upstream>
     <remote-id type="google-code">phantomjs</remote-id>
     <remote-id type="bitbucket">ariya/phantomjs</remote-id>
