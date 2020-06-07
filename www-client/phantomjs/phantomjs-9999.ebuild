@@ -8,6 +8,7 @@ inherit eutils toolchain-funcs pax-utils multiprocessing git-r3 qmake-utils
 DESCRIPTION="A headless WebKit scriptable with a JavaScript API"
 HOMEPAGE="http://phantomjs.org/"
 EGIT_REPO_URI="https://github.com/ariya/${PN}"
+EGIT_BRANCH="master"
 
 LICENSE="BSD-3"
 SLOT=$(ver_cut 1-3)
