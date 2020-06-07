@@ -34,10 +34,6 @@ DEPEND="
 "
 
 src_prepare() {
-	# Vanilla QtWebkit:5 does not support WebSecurityEnabled in QWebSettings
-	sed -r \
-		-e '/QWebSettings::WebSecurityEnabled/d' \
-		-i src/webpage.cpp
 
 	default
 }
