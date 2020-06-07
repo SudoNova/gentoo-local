@@ -58,6 +58,6 @@ src_install() {
 	dodoc ChangeLog README.md
 	if use examples ; then
 		docinto examples
-		dodoc examples/*
+		dodoc -r examples
 	fi
 }
