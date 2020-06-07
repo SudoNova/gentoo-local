@@ -45,6 +45,8 @@ src_configure() {
 		--datadir="${EPREFIX}"/usr/share
 #	make check
 }
+src_compile(){
+	make
 }
 
 src_test() {
