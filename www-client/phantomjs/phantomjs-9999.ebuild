@@ -25,6 +25,9 @@ RDEPEND="
 	>=dev-qt/qtwebkit-5.12:5
 	>=dev-qt/qtwidgets-5.12:5
 "
+BDEPEND="
+	dev-vcs/git
+"
 DEPEND="
 	${RDEPEND}
 	virtual/pkgconfig
