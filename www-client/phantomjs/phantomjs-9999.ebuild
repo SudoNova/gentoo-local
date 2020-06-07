@@ -48,9 +48,8 @@ src_configure() {
 src_compile(){
 	make
 }
-
 src_test() {
-	./bin/phantomjs test/run-tests.js || die
+	use test && make check
 }
 
 src_install() {
