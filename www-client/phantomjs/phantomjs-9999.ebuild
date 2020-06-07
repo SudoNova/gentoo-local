@@ -9,8 +9,8 @@ DESCRIPTION="A headless WebKit scriptable with a JavaScript API"
 HOMEPAGE="http://phantomjs.org/"
 EGIT_REPO_URI="https://github.com/ariya/${PN}"
 
-LICENSE="BSD"
 SLOT="0"
+LICENSE="BSD-3"
 KEYWORDS=""
 IUSE="examples"
 
