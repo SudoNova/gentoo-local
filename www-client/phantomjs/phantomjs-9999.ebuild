@@ -13,7 +13,7 @@ EGIT_BRANCH="master"
 LICENSE="BSD-3"
 SLOT=$(ver_cut 1-3)
 KEYWORDS=""
-IUSE="examples"
+IUSE="examples test"
 
 RDEPEND="
 	media-libs/fontconfig
