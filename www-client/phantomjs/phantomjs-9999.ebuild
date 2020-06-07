@@ -39,7 +39,12 @@ src_prepare() {
 }
 
 src_configure() {
-	eqmake5
+	# unset CBUILD
+	./configure \
+		--prefix="${EPREFIX}"/usr \
+		--datadir="${EPREFIX}"/usr/share
+#	make check
+}
 }
 
 src_test() {
