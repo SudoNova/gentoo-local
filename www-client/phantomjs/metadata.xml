@@ -5,8 +5,6 @@
       <email>sunova@tutanota.com</email>
    </maintainers>
   <upstream>
-    <remote-id type="google-code">phantomjs</remote-id>
-    <remote-id type="bitbucket">ariya/phantomjs</remote-id>
     <remote-id type="github">ariya/phantomjs</remote-id>
   </upstream>
 </pkgmetadata>
