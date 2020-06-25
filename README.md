@@ -1,2 +1,2 @@
-# gentoo-local
+# sunova-overlay
 My local Gentoo repository
