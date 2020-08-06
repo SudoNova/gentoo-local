@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit autotools gnome2-utils git-r3
+inherit autotools git-r3
 
 DESCRIPTION="NetworkManager OpenVPN plugin"
 HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
@@ -68,4 +68,3 @@ src_install(){
 	doins shared/nm-utils/*.c
 	doins shared/nm-utils/*.h
 }
-
