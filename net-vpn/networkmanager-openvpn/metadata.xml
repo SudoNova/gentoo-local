@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="project">
+		<email>gnome@gentoo.org</email>
+		<name>Gentoo GNOME Desktop</name>
+	</maintainer>
+	<maintainer type="person">
+		<email>sunova@tutanota.com</email>
+		<description>Added 9999 ebuild</description>
+	</maintainer>
+	<use>
+		<flag name="glib">Build with glib support</flag>
+	</use>
+</pkgmetadata>
