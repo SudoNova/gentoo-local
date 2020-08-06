@@ -11,8 +11,8 @@ HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
 LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS=""
-IUSE="-gtk +glib test"
-REQUIRED_USE=" !gtk" #This flag is still not working
+IUSE="gtk glib test"
+REQUIRED_USE="!glib" # This flag is still not working
 RESTRICT="!test? ( test )"
 EGIT_REPO_URI="https://gitlab.gnome.org/GNOME/NetworkManager-openvpn"
 RDEPEND="
@@ -58,3 +58,14 @@ src_configure() {
 		$(use_with gtk gnome) \
 		$(use_with glib libnm-glib)
 }
+src_install(){
+	insinto /usr/src/debug/$CATEGORY/$PF/src/
+	doins	src/*.c
+	insinto /usr/src/debug/$CATEGORY/$PF/shared/
+	doins shared/*.c
+	doins shared/*.h
+	insinto /usr/src/debug/$CATEGORY/$PF/shared/nm-utils
+	doins shared/nm-utils/*.c
+	doins shared/nm-utils/*.h
+}
+
