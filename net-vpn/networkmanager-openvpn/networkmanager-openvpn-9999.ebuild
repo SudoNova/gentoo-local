@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS=""
 IUSE="gtk glib test"
 REQUIRED_USE="!glib" # This flag is still not working
-RESTRICT="!test? ( test )"
 EGIT_REPO_URI="https://gitlab.gnome.org/GNOME/NetworkManager-openvpn"
 RDEPEND="
 	acct-user/nm-openvpn
