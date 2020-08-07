@@ -27,15 +27,15 @@ RDEPEND="
 	)
 "
 
-BDEPEND="
-	>=sys-devel/automake-1.9
-"
+WANT_AUTOMAKE="1.9"
 
+BDEPEND="
+	sys-devel/gettext
+	virtual/pkgconfig
+"
 DEPEND="${RDEPEND}
 	dev-libs/libxml2:2
-	sys-devel/gettext
 	>=dev-util/intltool-0.35
-	virtual/pkgconfig
 "
 
 src_prepare() {
