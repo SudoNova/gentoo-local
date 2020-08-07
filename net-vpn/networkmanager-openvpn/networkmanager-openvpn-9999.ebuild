@@ -62,11 +62,14 @@ src_install(){
 	default_src_install
 	if has installsources ${FEATURES}; then
 		INTO_BASE=/usr/src/debug/$CATEGORY/$PF/
+		cd "$S/src/"
 		insinto		"$INTO_BASE/src/"
-		doins		"$S/src/*.c"
+		doins		*.c
+		cd ../shared
 		insinto		"$INTO_BASE/shared/"
-		doins -r	"$S/shared/*.c" "$S/shared/*.h"
+		doins -r	*.c *.h
+		cd nm-utils
 		insinto		"$INTO_BASE/shared/nm-utils"
-		doins -r	"$S/shared/nm-utils/*.c" "$S/shared/nm-utils/*.h"
+		doins -r	*.c *.h
 	fi
 }
