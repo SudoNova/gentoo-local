@@ -56,14 +56,17 @@ src_configure() {
 		--with-dist-version=Gentoo \
 		$(use_with gtk gnome) \
 		$(use_with glib libnm-glib)
+	ln -s $S/config.log $T
 }
 src_install(){
-	insinto /usr/src/debug/$CATEGORY/$PF/src/
-	doins	src/*.c
-	insinto /usr/src/debug/$CATEGORY/$PF/shared/
-	doins shared/*.c
-	doins shared/*.h
-	insinto /usr/src/debug/$CATEGORY/$PF/shared/nm-utils
-	doins shared/nm-utils/*.c
-	doins shared/nm-utils/*.h
+	default_src_install
+	if has installsources ${FEATURES}; then
+		INTO_BASE=/usr/src/debug/$CATEGORY/$PF/
+		insinto		$INTO_BASE/src/
+		doins		$S/src/*.c
+		insinto		$INTO_BASE/shared/
+		doins -r	$S/shared/*.c $S/shared/*.h
+		insinto		$INTO_BASE/shared/nm-utils
+		doins -r	$S/shared/nm-utils/*.c $S/shared/nm-utils/*.h
+	fi
 }
