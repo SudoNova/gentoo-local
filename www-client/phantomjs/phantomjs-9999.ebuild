@@ -50,14 +50,16 @@ src_compile(){
 }
 src_test() {
 	use test && make check
+	#./bin/phantomjs test/run-tests.js || die
 }
 
 src_install() {
 	pax-mark m bin/phantomjs || die
 	dobin bin/phantomjs
+	docinto "/usr/share/doc/${PN}/${PVR}"
 	dodoc ChangeLog README.md
 	if use examples ; then
-		docinto examples
 		dodoc -r examples
+		ln -s "${EPREFIX}/usr/share/doc/${PN}/${PVR}" "${EPREFIX}/usr/share/doc/${PN}/latest"
 	fi
 }
