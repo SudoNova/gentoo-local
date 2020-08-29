@@ -13,7 +13,7 @@ SRC_URI="https://www.alsa-project.org/files/pub/lib/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="alisp debug doc elibc_uclibc python +thread-safety"
+IUSE="alisp debug doc elibc_uclibc mixer python +thread-safety"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
@@ -22,7 +22,6 @@ RDEPEND="python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-1.1.6-missing_files.patch" #652422
 )
 
 pkg_setup() {
@@ -52,9 +51,11 @@ multilib_src_configure() {
 		# enable Python only on final ABI
 		$(multilib_native_use_enable python)
 		$(use_enable alisp)
+		$(use_enable mixer mixer-modules)
 		$(use_enable thread-safety)
 		$(use_with debug)
 		$(usex elibc_uclibc --without-versioned '')
+		$(usex alisp $(usex mixer '--enable-mixer-pymods' '') '')
 	)
 
 	ECONF_SOURCE="${S}" econf "${myeconfargs[@]}"
