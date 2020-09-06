@@ -1,0 +1,5 @@
+www-client/phantomjs::sunova-overlay
+app-android/scrcpy::sunova-overlay
+acct-group/nm-openvpn::sunova-overlay
+acct-user/nm-openvpn::sunova-overlay
+net-vpn/networkmanager-openvpn::sunova-overlay
