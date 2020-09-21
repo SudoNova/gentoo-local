@@ -24,6 +24,7 @@ RDEPEND="dev-lang/perl
 	gd? ( >=media-libs/gd-2.0.28[truetype] )
 	magic? ( sys-apps/file )
 	upnp? ( net-libs/miniupnpc:= net-libs/libnatpmp:= )
+	bittorrent? ( dev-ml/num )
 "
 
 DEPEND="${RDEPEND}
