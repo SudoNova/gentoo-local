@@ -1,2 +1,1 @@
-*/*::sunova-overlay
 net-vpn/networkmanager-openvpn
