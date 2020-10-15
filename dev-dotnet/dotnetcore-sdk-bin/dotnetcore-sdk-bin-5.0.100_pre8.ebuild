@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
@@ -22,7 +22,7 @@ RESTRICT="splitdebug"
 
 # The sdk includes the runtime-bin and aspnet-bin so prevent from installing at the same time
 # dotnetcore-sdk is the source based build
-
+IUSE="libressl"
 RDEPEND="
 	>=dev-dotnet/dotnetcore-sdk-bin-common-${PV}
 	>=sys-apps/lsb-release-1.4
@@ -31,14 +31,16 @@ RDEPEND="
 	>=sys-libs/libunwind-1.1-r1
 	>=dev-libs/icu-57.1
 	>=dev-util/lttng-ust-2.8.1
-	>=dev-libs/openssl-1.0.2h-r2
+	!libressl? ( >=dev-libs/openssl-1.0.2h-r2 )
+	libressl? ( >=dev-libs/libressl-3.2.1 )
 	>=net-misc/curl-7.49.0
 	>=app-crypt/mit-krb5-1.14.2
 	>=sys-libs/zlib-1.2.8-r1
 	!dev-dotnet/dotnetcore-sdk
 	!dev-dotnet/dotnetcore-sdk-bin:0
 	!dev-dotnet/dotnetcore-runtime-bin
-	!dev-dotnet/dotnetcore-aspnet-bin"
+	!dev-dotnet/dotnetcore-aspnet-bin
+"
 
 S=${WORKDIR}
 
