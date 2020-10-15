@@ -16,7 +16,7 @@ arm64? ( https://download.visualstudio.microsoft.com/download/pr/b416bc12-1478-4
 "
 
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~arm64"
 
 QA_PREBUILT="*"
 RESTRICT="splitdebug"
