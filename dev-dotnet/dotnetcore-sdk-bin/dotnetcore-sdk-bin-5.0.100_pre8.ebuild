@@ -15,7 +15,7 @@ arm? ( https://download.visualstudio.microsoft.com/download/pr/372de9c1-b63c-4df
 arm64? ( https://download.visualstudio.microsoft.com/download/pr/a1e93182-8026-4330-b78a-ee7d721107a2/003c59fc228a220df40d90d5ac434873/dotnet-sdk-5.0.100-preview.8.20417.9-linux-arm64.tar.gz )"
 
 SLOT="5.0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~arm64"
 
 QA_PREBUILT="*"
 RESTRICT="splitdebug"
