@@ -24,7 +24,7 @@ RESTRICT="splitdebug"
 # dotnetcore-sdk is the source based build
 IUSE="libressl"
 RDEPEND="
-	>=dev-dotnet/dotnetcore-sdk-bin-common-${PV}
+	>=dev-dotnet/dotnetcore-sdk-bin-common-${PVR}
 	>=sys-apps/lsb-release-1.4
 	>=sys-devel/llvm-4.0
 	>=dev-util/lldb-4.0
