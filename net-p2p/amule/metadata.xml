@@ -14,7 +14,6 @@
 	</upstream>
 	<use>
 		<flag name="daemon">Enable amule daemon</flag>
-		<flag name="gui">Enable amule GTK gui</flag>
 		<flag name="webserver">Enable webserver</flag>
 		<flag name="stats">Enable statistic reporting</flag>
 	</use>

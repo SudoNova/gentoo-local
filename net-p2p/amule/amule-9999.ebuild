@@ -73,7 +73,6 @@ src_configure() {
 		$(use_enable debug)
 		$(use_enable daemon amule-daemon)
 		$(use_enable geoip)
-		$(use_enable gui amule-gui)
 		$(use_enable nls)
 		$(use_enable remote webserver)
 		$(use_enable stats cas)
