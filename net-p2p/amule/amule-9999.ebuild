@@ -21,7 +21,7 @@ HOMEPAGE="http://www.amule.org/"
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="daemon debug geoip nls remote stats upnp +X"
+IUSE="daemon debug geoip nls webserver stats upnp +X"
 
 RDEPEND="
 	dev-libs/boost:=
@@ -33,7 +33,7 @@ RDEPEND="
 	daemon? ( acct-user/amule )
 	geoip? ( dev-libs/geoip )
 	nls? ( virtual/libintl )
-	remote? (
+	webserver? (
 		acct-user/amule
 		media-libs/libpng:0=
 	)
