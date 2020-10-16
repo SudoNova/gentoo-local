@@ -23,6 +23,7 @@ LICENSE="GPL-2+"
 SLOT="0"
 IUSE="daemon debug geoip nls webserver stats upnp +X"
 
+LIBPNG_MIN_VER=1.2.3
 RDEPEND="
 	dev-libs/boost:=
 	dev-libs/crypto++:=
@@ -35,7 +36,7 @@ RDEPEND="
 	nls? ( virtual/libintl )
 	webserver? (
 		acct-user/amule
-		media-libs/libpng:0=
+		>=media-libs/libpng-${LIBPNG_MIN_VER}
 	)
 	stats? ( media-libs/gd:=[jpeg,png] )
 	upnp? ( net-libs/libupnp:0 )
