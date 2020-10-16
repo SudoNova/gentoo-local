@@ -10,7 +10,7 @@ HOMEPAGE="http://phantomjs.org/"
 EGIT_REPO_URI="https://github.com/ariya/${PN}"
 EGIT_BRANCH="master"
 
-LICENSE="BSD-3"
+LICENSE="BSD"
 SLOT=$(ver_cut 1-3)
 KEYWORDS=""
 IUSE="examples test"
