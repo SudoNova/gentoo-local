@@ -1,0 +1,24 @@
+diff --git a/m4/qt.m4 b/m4/qt.m4
+--- a/m4/qt.m4	2020-10-17 01:52:08.238214570 +0330
++++ b/m4/qt.m4	2020-10-17 01:52:55.218420419 +0330
+@@ -11,7 +11,7 @@
+ [
+ 	AS_IF([test -z ${QT_MOC}],
+ 	[
+-		AC_PATH_PROGS(QT_MOC, moc-qt4 moc)
++		AC_PATH_PROGS(QT_MOC, moc-qt5 moc)
+ 		AS_IF([test -z ${QT_MOC}],
+ 		[
+ 			echo moc not found
+@@ -35,9 +35,9 @@
+ 
+ 	AS_IF([test "${QT_MOC}" != "not found"],
+ 	[
+-		AC_MSG_CHECKING(for moc version >= 4)
++		AC_MSG_CHECKING(for moc version >= 5)
+ 		QT_MOC_VERSION=`${QT_MOC} -v 2>&1 | sed -e 's/^.* (/(/'`
+-		AS_IF([test `echo ${QT_MOC_VERSION} | sed -e 's/^.* //' -e 's/\..*$//'` = 4],
++		AS_IF([test `echo ${QT_MOC_VERSION} | sed -e 's/^.* //' -e 's/\..*$//'` = 5],
+ 		[
+ 			AC_MSG_RESULT(found ${QT_MOC_VERSION})
+ 		],

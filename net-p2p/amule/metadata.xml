@@ -16,5 +16,6 @@
 		<flag name="daemon">Enable amule daemon</flag>
 		<flag name="webserver">Enable webserver</flag>
 		<flag name="stats">Enable statistic reporting</flag>
+		<flag name="xas">xas XChat2 plugin</flag>
 	</use>
 </pkgmetadata>
