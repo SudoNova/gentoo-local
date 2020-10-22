@@ -152,7 +152,7 @@ src_unpack() {
 	EGIT_CLONE_TYPE="single+tags"
 
 	debug-print-function ${FUNCNAME} "$@"
-    _git-r3_env_setup
+	_git-r3_env_setup
 
 	git-r3_fetch || ewarn "Git Checkout failed, rebuilding current HEAD"
 	git-r3_checkout
