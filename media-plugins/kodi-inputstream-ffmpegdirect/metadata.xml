@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sunova@tutanota.com</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">xbmc/inputstream.ffmpegdirect</remote-id>
+	</upstream>
+</pkgmetadata>
