@@ -28,6 +28,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="
+	media-plugins/kodi-inputstream-ffmpegdirect
 	dev-libs/pugixml
 	~media-tv/kodi-9999
 	sys-libs/zlib
