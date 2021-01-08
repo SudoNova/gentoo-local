@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ $PV == "9999"]; then
+    inherit git-r3
+    unset SRC_URI
+    EGIT_REPO_URI=""
+else
+    EGIT_REPO_URI=""
+    SRC_URI=""
+fi

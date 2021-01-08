@@ -1,0 +1,16 @@
+#!/bin/bash
+
+remove_unwanted_locales() {
+    einfo "Removing unwanted locales (not listed in locale -a)"
+    local locales=( $(locale -a) )
+    local directories=( $(find "$D" -type d | grep /usr/share/locale/ | grep -v LC_MESSAGES) )
+    local remove=()
+    for directory in ${directories[@]}; do
+        for locale in ${locales[@]}; do
+            echo "$directory" | grep -oP '[^/]+$' | grep -xsq "$locale"
+            [ $? -eq 0 ] && continue 2
+        done
+    rm -rf "$directory"
+    done
+}
+
