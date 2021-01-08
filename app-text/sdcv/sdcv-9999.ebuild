@@ -40,6 +40,7 @@ src_configure() {
 	echo $mycmakea
 	cmake_src_configure
 }
+
 src_compile() {
 	cmake_src_compile
 	pwd
@@ -47,4 +48,22 @@ src_compile() {
 		cd "$BUILD_DIR"
 		emake lang
 	fi
+}
+
+remove_unwanted_locales() {
+	einfo "Removing unneeded locales (not listed in locale -a)"
+	local locales=( $(locale -a) )
+	local directories=( $(find "$D" -type d | grep /usr/share/locale/ | grep -v LC_MESSAGES) )
+	local remove=()
+	for directory in ${directories[@]}; do
+		for locale in ${locales[@]}; do
+			echo "$directory" | grep -oP '[^/]+$' | grep -xsq "$locale"
+			[ $? -eq 0 ] && continue 2
+		done
+	rm -rf "$directory"
+	done
+}
+
+pkg_preinst() {
+	remove_unwanted_locales
 }
