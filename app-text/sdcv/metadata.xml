@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>sunova@tutanota.com</email>
+    <name>Alireza Mohamadi</name>
+  </maintainer>
+  <upstream>
+        <maintainer>
+          <name>Dushistov</name>
+          <email>dushistov@mail.ru</email>
+        </maintainer>
+        <remote-id type="github">https://github.com/Dushistov/sdcv</remote-id>
+        <changelog>https://github.com/Dushistov/sdcv/raw/master/NEWS</changelog>
+  </upstream>
+</pkgmetadata>
